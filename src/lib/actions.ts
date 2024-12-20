@@ -559,6 +559,7 @@ export async function getPaymentInfo(
 
 export async function getJwtToken(accessToken: string): Promise<string | null> {
   try {
+    console.log(`${env.NEXT_PUBLIC_BACKEND_URL}/user/connect`);
     const response = await fetch(
       `${env.NEXT_PUBLIC_BACKEND_URL}/user/connect`,
       {
@@ -570,6 +571,8 @@ export async function getJwtToken(accessToken: string): Promise<string | null> {
         body: JSON.stringify({ accessToken }),
       },
     );
+
+    console.log(response);
 
     if (!response.ok) {
       throw new Error('Failed to fetch JWT token');

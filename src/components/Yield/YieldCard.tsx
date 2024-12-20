@@ -17,7 +17,6 @@ import {
   percentFormatter,
   usdFormatter,
 } from '@/lib';
-import { USDC_MINT } from '@mrgnlabs/mrgn-common';
 import { Button } from '../ui/button';
 import { ActionBoxDialog } from '../common/ActionBox/ActionBoxDialog';
 import { ActionType } from '@/lib/mrgnlend';

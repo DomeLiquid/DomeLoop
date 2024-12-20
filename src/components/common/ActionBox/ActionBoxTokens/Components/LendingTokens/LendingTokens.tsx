@@ -1,7 +1,5 @@
 import React, { act } from 'react';
 
-import { PublicKey } from '@solana/web3.js';
-
 import { SelectedBankItem, TokenListWrapper } from '../SharedComponents';
 import { ActionType, ExtendedBankInfo, RepayType } from '@/lib/mrgnlend';
 import { GroupData } from '@/app/stores/tradeStore';
@@ -18,7 +16,6 @@ type LendingTokensProps = {
   isDialog?: boolean;
   isTokenSelectable?: boolean;
   repayType?: RepayType;
-  blacklistRepayTokens?: PublicKey[];
   tokensOverride?: ExtendedBankInfo[];
 
   setSelectedRepayBank: (selectedBank: ExtendedBankInfo | null) => void;
@@ -33,7 +30,6 @@ export const LendingTokens = ({
   isDialog,
   isTokenSelectable,
   repayType,
-  blacklistRepayTokens = [],
   tokensOverride,
 
   setSelectedRepayBank,

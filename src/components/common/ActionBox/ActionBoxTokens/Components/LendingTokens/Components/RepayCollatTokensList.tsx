@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { PublicKey } from '@solana/web3.js';
 import { GroupData } from '@/app/stores/tradeStore';
 
 import { TokenListCommand } from '../../SharedComponents';

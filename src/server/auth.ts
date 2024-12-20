@@ -39,6 +39,7 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, user, account }) {
       if (user && account) {
         token.accessToken = account.access_token;
+        console.log('access_token:', account.access_token);
         // 获取并保存 jwtToken
         const jwtToken = await getJwtToken(account.access_token as string);
         if (jwtToken) {
