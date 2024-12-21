@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { LoaderPinwheelIcon } from './Loader-Pinwheel';
 
 type LoaderProps = {
   label?: string;
@@ -29,47 +30,47 @@ export function Loader({
   className,
   iconSize = 24,
 }: LoaderProps) {
-  const [isVisible, setIsVisible] = React.useState(true);
+  // const [isVisible, setIsVisible] = React.useState(true);
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible((prev) => !prev);
-    }, 1500);
+  // React.useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIsVisible((prev) => !prev);
+  //   }, 1500);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  const containerVariants: Variants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-    exit: {
-      transition: {
-        staggerChildren: 0.1,
-        staggerDirection: -0.5,
-        when: 'afterChildren',
-      },
-    },
-  };
+  // const containerVariants: Variants = {
+  //   hidden: {},
+  //   visible: {
+  //     transition: {
+  //       staggerChildren: 0.1,
+  //     },
+  //   },
+  //   exit: {
+  //     transition: {
+  //       staggerChildren: 0.1,
+  //       staggerDirection: -0.5,
+  //       when: 'afterChildren',
+  //     },
+  //   },
+  // };
 
-  const pathVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
+  // const pathVariants: Variants = {
+  //   hidden: { opacity: 0 },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       duration: 0.5,
+  //     },
+  //   },
+  //   exit: {
+  //     opacity: 0,
+  //     transition: {
+  //       duration: 0.5,
+  //     },
+  //   },
+  // };
 
   return (
     <div
@@ -78,7 +79,7 @@ export function Loader({
         className,
       )}
     >
-      <motion.svg
+      {/* <motion.svg
         width="32"
         height="32"
         viewBox="0 0 704 704"
@@ -95,19 +96,20 @@ export function Loader({
               animate="visible"
               exit="exit"
             >
-              {/* {paths.map((d, index) => (
+              {paths.map((d, index) => (
                 <motion.path
                   key={index}
                   d={d}
                   fill="white"
                   variants={pathVariants}
                 /> // 将fill属性改为白色
-              ))} */}
+              ))}
             </motion.g>
           )}
         </AnimatePresence>
-      </motion.svg>
+      </motion.svg> */}
 
+      <LoaderPinwheelIcon />
       <p>{label}</p>
     </div>
   );

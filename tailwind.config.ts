@@ -145,6 +145,11 @@ const config = {
           '0%': { 'background-position': '0%' },
           '100%': { 'background-position': '200%' },
         },
+        'border-beam': {
+          '100%': {
+            'offset-distance': '100%',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -152,6 +157,7 @@ const config = {
         spin: 'spin 1s linear infinite',
         pulsate: 'pulsate 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         rainbow: 'rainbow var(--speed, 2s) infinite linear',
+        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
       },
     },
     fontFamily: {

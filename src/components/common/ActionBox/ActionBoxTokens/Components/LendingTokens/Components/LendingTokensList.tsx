@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { WSOL_MINT } from '@mrgnlabs/mrgn-common';
 import { ActionType } from '@/lib/mrgnlend';
 import { ExtendedBankInfo } from '@/lib/mrgnlend';
 import { GroupData } from '@/app/stores/tradeStore';

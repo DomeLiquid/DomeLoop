@@ -5,11 +5,11 @@ import { SiteConfig } from '@/types';
 export const OPEN_SOURCE_URL = 'https://github.com/domeliquid';
 
 export const siteConfig: SiteConfig = {
-  name: 'DomeFi',
+  name: 'DomeFi Loop',
   author: 'lixv',
   description:
     'DomeFi Loop is a decentralized lending protocol that enables users to borrow and lend assets with a wide range of stablecoins, cryptocurrencies, and derivatives.',
-  keywords: ['Mixin', 'DomeFI', 'Lend', 'Borrow', 'Loop'],
+  keywords: ['Mixin', 'DomeFi', 'Lend', 'Borrow', 'Loop'],
   url: {
     base: env.NEXT_PUBLIC_APP_URL,
     author: 'https://github.com/lixvyang',
